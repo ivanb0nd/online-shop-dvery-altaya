@@ -1,0 +1,129 @@
+// ОБЩИЕ ПАРАМЕТРЫ
+body {
+    min-width: 320px;
+    color: $text-color;
+    font-family: $fontFamily;
+    font-size: 14px;
+    overflow-x: hidden;
+    position: relative;
+    &._lock{
+        overflow: hidden;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.page {
+    flex: 1 1 auto;
+    &__container{
+        padding: 0 $gutter;
+    }
+    &__container-sidebar{
+        display: flex;
+        gap: 30px;
+        padding: 0 $gutter;
+        @media (max-width: $md2+px) {
+            padding: 0;
+        }
+    }
+    
+}
+
+.page-section {
+    margin: 0px 0px 60px 0px;
+}
+
+
+.relative {
+    position: relative;
+    
+}
+
+
+// АДАПТИВНЫЕ ИЗОБРАЖЕНИЯ
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+body.ie {
+    ._ibg {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    ._ibg img {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.title{
+    font-size: 48px;
+    line-height: 56 / 48 * 100%;
+    font-weight: 300;
+    text-align: center;
+    @media (max-width: $md2+px) {
+        font-size: 40px;
+    }
+    @media (max-width: $md3+px) {
+        font-size: 30px;
+    }
+    @media (max-width: $md4+px) {
+        font-size: 25px;
+    }
+}
+
+.sections__title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 0px 0px 50px 0px;
+    @media (max-width: $md2+px) {
+        font-size: 20px;
+    }
+    @media (max-width: $md3+px) {
+        font-size: 16px;
+    }
+}
+
+.fixed {
+	position: fixed;
+	top: $gutter;
+	left: 0;
+}
+
+.absolute {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+._green {
+    color: $main-color;
+    font-weight: 700;
+}
