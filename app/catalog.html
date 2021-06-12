@@ -10,17 +10,18 @@
 </head>
 
 <body>
+  <div class="overlay" style="display: none"></div>
   <div class="wrapper">
 
     <header class="header">
       <div class="header__top menu">
         <div class="menu__content container">
-          <button class="menu__icon icon-menu">
+          <button class="menu__icon icon-menu" aria-label="Открыть меню сайта">
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <a class="menu__logo" href="#">
+          <a class="menu__logo" href="index.html">
             <img class="menu__logo-img" src="img/logo-svg.svg" alt="">
           </a>
           <div class="menu__search">
@@ -108,7 +109,7 @@
       <div class="header__bottom secondheader">
         <div class="secondheader__container container">
           <div class="secondheader__first-block first-block">
-            <a href="#">
+            <a href="index.html">
               <img src="img/logo-svg.svg" alt="">
             </a>
           </div>
@@ -184,13 +185,636 @@
                 <a href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <span>Контакты</span>
+                <span>Каталог</span>
               </li>
             </ul>
           </div>
         </div>
         <h2 class="sections__title">Каталог</h2>
+        <section class="catalog page-section">
+          <div class="catalog__content grid">
+
+            
+              <div class="catalog__left">
+                <div class="catalog__filters">
+                  <div class="catalog__filters-top">
+                    <h3 class="catalog__subltitle">Фильтры</h3>
+                    <div class="catalog__actions">
+                      <button class="catalog__reset-mobile">Cбросить</button>
+                      <button class="catalog__close" aria-label="Закрыть меню фильтров"></button>
+                    </div>
+                  </div>
+                  <div class="catalog__properties">
+  
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Цена, руб.</div>
+                      <div class="catalog__prop-inner catalog-price">
+                        <div class="catalog-price__wrapper">
+                          <input type="text" class="catalog-price__input" id="input-0">
+                          <span class="catalog-price__dash">-</span>
+                          <input type="text" class="catalog-price__input" id="input-1">
+                        </div>
+                        <div class="catalog-price__element" id="range-slider"></div>
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Наличие</div>
+                      <div class="catalog__prop-inner catalog-radio">
+                        <label class="custom-radio option">
+                          <input class="custom-radio__input visually-hidden" type="radio" name="availability" value="Все">
+                          <span class="custom-radio__content">Все</span>
+                        </label>
+    
+                        <label class="custom-radio option">
+                          <input class="custom-radio__input visually-hidden" type="radio" name="availability" value="В наличии">
+                          <span class="custom-radio__content">В наличии</span>
+                        </label>
+    
+                        <label class="custom-radio option">
+                          <input class="custom-radio__input visually-hidden" type="radio" name="availability" value="На складе" disabled>
+                          <span class="custom-radio__content">На складе</span>
+                        </label>
+    
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Стекло / Зеркало</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="GlassOrMirror[]" value="Со стеклом">
+                          <span class="custom-checkbox__content">Со стеклом</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="GlassOrMirror[]" value="С зеркалом">
+                          <span class="custom-checkbox__content">С зеркалом</span>
+                        </label>
+    
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Производитель</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="manufacturer[]" value="AxelDoors">
+                          <span class="custom-checkbox__content">AxelDoors</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="manufacturer[]" value="ESTET">
+                          <span class="custom-checkbox__content">ESTET</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="manufacturer[]" value="Сибирь Профиль">
+                          <span class="custom-checkbox__content">Сибирь Профиль</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="manufacturer[]" value="ЧДК">
+                          <span class="custom-checkbox__content">ЧДК</span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Цвет</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Айс">
+                          <span class="custom-checkbox__content">Айс</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Беленый дуб">
+                          <span class="custom-checkbox__content">Беленый дуб</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Белое дерево"
+                            disabled>
+                          <span class="custom-checkbox__content">Белое дерево</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Вельвет"
+                            disabled>
+                          <span class="custom-checkbox__content">Вельвет</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Белый"
+                            disabled>
+                          <span class="custom-checkbox__content">Белый</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Клен айс">
+                          <span class="custom-checkbox__content">Клен айс</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Капучино">
+                          <span class="custom-checkbox__content">Капучино</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Керамик">
+                          <span class="custom-checkbox__content">Керамик</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Дуб скандинавский">
+                          <span class="custom-checkbox__content">Дуб скандинавский</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Дуб скальный">
+                          <span class="custom-checkbox__content">Дуб скальный</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Груша">
+                          <span class="custom-checkbox__content">Груша</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Вишня">
+                          <span class="custom-checkbox__content">Вишня</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Ель альпийская">
+                          <span class="custom-checkbox__content">Ель альпийская</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Шоко">
+                          <span class="custom-checkbox__content">Шоко</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Серый">
+                          <span class="custom-checkbox__content">Серый</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Венге">
+                          <span class="custom-checkbox__content">Венге</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Перламутр">
+                          <span class="custom-checkbox__content">Перламутр</span>
+                        </label>
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="color[]" value="Онтарио">
+                          <span class="custom-checkbox__content">Онтарио</span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Использование во влажных помещениях</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="wetPremises[]" value="Да">
+                          <span class="custom-checkbox__content">Да</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="wetPremises[]" value="Нет">
+                          <span class="custom-checkbox__content">Нет</span>
+                        </label>
+    
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Конструкция</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="construction[]" value="Царговые">
+                          <span class="custom-checkbox__content">Царговые</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="construction[]" value="Щитовые">
+                          <span class="custom-checkbox__content">Щитовые</span>
+                        </label>
+    
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Остекление</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Белое">
+                          <span class="custom-checkbox__content">Белое</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Графит">
+                          <span class="custom-checkbox__content">Графит</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Зеркало">
+                          <span class="custom-checkbox__content">Зеркало</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Лакобель">
+                          <span class="custom-checkbox__content">Лакобель</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="С пескоструйным рисунком">
+                          <span class="custom-checkbox__content">С пескоструйным рисунком</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="С узким стеклом">
+                          <span class="custom-checkbox__content">С узким стеклом</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Светлое">
+                          <span class="custom-checkbox__content">Светлое</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Темное">
+                          <span class="custom-checkbox__content">Темное</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="glazing[]" value="Фьюзинг">
+                          <span class="custom-checkbox__content">Фьюзинг</span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="catalog__prop">
+                      <div class="catalog__caption">Комплектация</div>
+                      <div class="catalog__prop-inner catalog-checkbox">
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="equipment[]" value="Без наличников">
+                          <span class="custom-checkbox__content">Без наличников</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="equipment[]" value="Двери в сборе">
+                          <span class="custom-checkbox__content">Двери в сборе</span>
+                        </label>
+    
+                        <label class="custom-checkbox option">
+                          <input class="custom-checkbox__input visually-hidden" type="checkbox" name="equipment[]" value="С коробкой">
+                          <span class="custom-checkbox__content">С коробкой</span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="catalog__btns">
+                      <button class="catalog__apply">Применить</button>
+                      <button class="catalog__reset">сбросить</button>
+                    </div>
+                  </div> 
+  
+                </div>
+              </div>
         
+
+            <div class="catalog__grid">
+              <div class="catalog__filters-btn">
+                <button class="filter-btn">Фильтры</button>
+              </div>
+              <div class="catalog__sorting">
+                <span>Сортировка</span>
+                <div class="select">
+                  <select>
+                    <option value="1">По популярности</option>
+                    <option value="2">Сначала дешёвые</option>
+                    <option value="3">Сначала дорогие</option>
+                  </select>
+                </div>
+              </div>
+              <ul class="catalog-list grid">
+                <li class="catalog-list__item">
+                  <article class="card card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">8 489 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">5 789 <span>₽</span></div>
+                        <div class="card__price-old">8 899 <span>₽</span></div>
+                      </div>
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">6 599 <span>₽</span></div>
+                        <div class="card__price-old">9 699 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">11 259 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit card__not-available">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">6 599 <span>₽</span></div>
+                        <div class="card__price-old">9 699 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">5 789 <span>₽</span></div>
+                        <div class="card__price-old">8 899 <span>₽</span></div>
+                      </div>
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">8 999 <span>₽</span></div>
+                        <div class="card__price-old">10 599 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">11 259 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__hit card__not-available">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">11 259 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit card__not-available">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">8 999 <span>₽</span></div>
+                        <div class="card__price-old">10 599 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__sale card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-3.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь с МДФ с двух сторон "Модерн" венге</div>
+                      <div class="card__price">
+                        <div class="card__price-current">5 789 <span>₽</span></div>
+                        <div class="card__price-old">8 899 <span>₽</span></div>
+                      </div>
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__hit ">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">11 259 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+
+                <li class="catalog-list__item">
+                  <article class="card card__hit">
+                    <div class="card__states states">
+                      <div class="sale">Скидка</div>
+                      <div class="hit">Хит</div>
+                      <div class="not-available">Нет в наличии</div>
+                    </div>
+                    <a class="card__link" href="#">
+                      <div class="card__img">
+                        <img src="img/images/cards/card-2.png" alt="product">
+                      </div>
+                      <div class="card__title">Входная дверь мдф с двух сторон - ГТ 19</div>
+                      <div class="card__price">
+                        <div class="card__price-current">11 259 <span>₽</span></div>
+                      </div>
+
+                    </a>
+                    <div class="actions">
+                      <button class="card__btn-add">В корзину</button>
+                      <button class="card__favorite"></button>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <div class="catalog__more">
+                <button class="catalog__more-btn">Показать еще</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </div>
 
     </main>
@@ -298,7 +922,7 @@
     <div class="popup" id="order">
       <div class="popup__body">
         <div class="popup__content">
-          <button class="popup__close close-popup"></button>
+          <button class="popup__close close-popup" aria-label="Закрыть модальное окно"></button>
           <h3 class="popup__title">Закажите <br> профессиональный замер</h3>
           <p class="popup__text">Наш замерщик приедет в удобное для Вас время, сделает замеры проемов, оформит
             замерный лист, по которому менеджер оформит заказ.</p>
@@ -337,7 +961,7 @@
     <div class="popup" id="privacy-policy">
       <div class="popup__body">
         <div class="popup__content">
-          <button class="popup__close close-popup"></button>
+          <button class="popup__close close-popup" aria-label="Закрыть модальное окно"></button>
           <h3 class="popup__title">Политика конфиденциальности и обработки персональных данных</h3>
           <p class="popup__text">
 
@@ -631,6 +1255,9 @@
       </div>
     </div>
   </div>
+
+  <button class="scrollup" id="buttonUp" aria-label="Прокрутить страницу вверх"></button>
+
 
   <script src="js/slick.min.js"></script>
   <script src="js/main.min.js"></script>

@@ -211,8 +211,6 @@
         height: 100%;
     }
 
-    &__states {
-    }
 
     &__img {
         display: flex;
@@ -289,6 +287,7 @@
         background-color: $main-color;
         border-radius: 5px;
         z-index: 2;
+        transition: all 0.3s ease 0s;
         &::before{
             content: '';
             position: absolute;
@@ -298,6 +297,12 @@
             background: url(../img/icons/favorite-btn.png) center center/ cover no-repeat;
             width: 30px;
             height: 30px;
+        }
+
+        @media (min-width: $md2+px) {
+            &:hover{
+                background-color: #00863c;
+            }
         }
     }
 }
@@ -343,7 +348,7 @@
 .not-available {
     padding: 5px 10px;
     border-radius: 0px 100px 100px 0px;
-    box-shadow: 3px 3px 7px #000;
+    box-shadow: none;
     background-color: rgb(179, 179, 179);
     display: none;
 }
@@ -365,6 +370,10 @@
 
 .card__not-available .not-available {
     display: inline-block;
+}
+
+.card__not-available.card:hover {
+    box-shadow: none;
 }
 
 .card__not-available .card__price-old{

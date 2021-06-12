@@ -9,15 +9,13 @@
 
 }
 
-a:focus,a:active{
-    outline: none;
-}
 nav, footer, header, aside{
     display: block;
 }
 
 html, body{
     // -webkit-tap-highlight-color: rgba(0,0,0,0); // Убирает фон при клике на элемент
+    
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     height: 100%;
     width: 100%;
@@ -26,20 +24,16 @@ html, body{
     font-size: 14px;
 }
 
-input{
-    outline: none;
-}
 
-input::-ms-clear{
-    display: none;
-   
-}
+// input::-ms-clear{
+//     display: none;
+// }
+
 button{
     cursor: pointer;
     background-color: transparent;
     padding: 0;
     border: 0;
-    outline: none;
 }
 a {
     color: inherit;

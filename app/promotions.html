@@ -15,12 +15,12 @@
     <header class="header">
       <div class="header__top menu">
         <div class="menu__content container">
-          <button class="menu__icon icon-menu">
+          <button class="menu__icon icon-menu" aria-label="Открыть меню сайта">
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <a class="menu__logo" href="#">
+          <a class="menu__logo" href="index.html">
             <img class="menu__logo-img" src="img/logo-svg.svg" alt="">
           </a>
           <div class="menu__search">
@@ -108,7 +108,7 @@
       <div class="header__bottom secondheader">
         <div class="secondheader__container container">
           <div class="secondheader__first-block first-block">
-            <a href="#">
+            <a href="index.html">
               <img src="img/logo-svg.svg" alt="">
             </a>
           </div>
@@ -234,7 +234,6 @@
                       <div class="card__price-current">5 789 <span>₽</span></div>
                       <div class="card__price-old">8 899 <span>₽</span></div>
                     </div>
-
                   </a>
                   <div class="actions">
                     <button class="card__btn-add">В корзину</button>
@@ -436,7 +435,7 @@
     <div class="popup" id="order">
       <div class="popup__body">
         <div class="popup__content">
-          <button class="popup__close close-popup"></button>
+          <button class="popup__close close-popup" aria-label="Закрыть модальное окно"></button>
           <h3 class="popup__title">Закажите <br> профессиональный замер</h3>
           <p class="popup__text">Наш замерщик приедет в удобное для Вас время, сделает замеры проемов, оформит
             замерный лист, по которому менеджер оформит заказ.</p>
@@ -475,7 +474,7 @@
     <div class="popup" id="privacy-policy">
       <div class="popup__body">
         <div class="popup__content">
-          <button class="popup__close close-popup"></button>
+          <button class="popup__close close-popup" aria-label="Закрыть модальное окно"></button>
           <h3 class="popup__title">Политика конфиденциальности и обработки персональных данных</h3>
           <p class="popup__text">
 
@@ -769,6 +768,8 @@
       </div>
     </div>
   </div>
+
+  <button class="scrollup" id="buttonUp" aria-label="Прокрутить страницу вверх"></button>
 
   <script src="js/slick.min.js"></script>
   <script src="js/main.min.js"></script>

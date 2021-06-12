@@ -4,11 +4,13 @@ $text-dark: #4d4d4d;
 //Background
 // $bg-color: rgb(114, 114, 114);
 
-//Main color
+//Colors
 $main-color: #019b46;
-//Secondary color 
-
+$catalog-filters-color:#ededed;
 // $secondary-color: ;
+$second-color: #00a64c;
+
+$input-border-color: #333;
 
 $gutter: 20px;
 $title-margin: 60px;
@@ -17,3 +19,7 @@ $title-margin: 60px;
 $footer-bg-color: #343434;
 $footer-text-color: #999;
 $footer-title-color: rgb(197, 197, 197);
+
+//gap
+
+$grid-gap: 20px;

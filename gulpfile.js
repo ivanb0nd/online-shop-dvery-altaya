@@ -48,8 +48,9 @@ function scss() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
-    'app/js/slick.min.js',
-    'app/js/main.js'
+    'app/js/vendors/**.js',
+    // 'app/js/slick.min.js',
+    'app/js/main.js',
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())

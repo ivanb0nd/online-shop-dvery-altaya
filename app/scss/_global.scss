@@ -1,5 +1,6 @@
 // ОБЩИЕ ПАРАМЕТРЫ
 body {
+    scroll-behavior: smooth;
     min-width: 320px;
     color: $text-color;
     font-family: $fontFamily;
@@ -44,6 +45,12 @@ hr {
 .relative {
     position: relative;
     
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $grid-gap;
 }
 
 
@@ -99,7 +106,7 @@ body.ie {
         font-size: 20px;
     }
     @media (max-width: $md3+px) {
-        font-size: 16px;
+        // font-size: 16px;
     }
 }
 
@@ -126,4 +133,49 @@ body.lock {
 ._green {
     color: $main-color;
     font-weight: 700;
+}
+
+
+//scroll-up button
+
+.scrollup{
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    background: url(../img/icons/scrollup.svg) 0 0/cover no-repeat;
+    background-color: rgb(134, 134, 134);
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    transition: all 0.3s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%);
+}
+
+.scrollup.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+
+    @media (max-width: $md2+px) {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+// Для скрытия элементов
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
