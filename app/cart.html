@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О компании</title>
+  <title>Контакты</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -189,83 +189,53 @@
                 <a href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs__list-item">
-                <span>О компании</span>
+                <span>Корзина</span>
               </li>
             </ul>
           </div>
         </div>
-        <h2 class="sections__title">О компании</h2>
-        <section class="about-text page-section">
-          <p>
-            Компания «Двери Алтая» основана в 2013 году в городе Барнауле. С тех пор компания стремительно набирает
-            обороты, улучшая качество услуг и расширяя ассортимент продукции.
-          </p>
-
-          <p>В 2016 году ассортимент продукции был значительно расширен, потребовалось увеличение торговых и складских
-            площадей. Открылся большой в городе Барнауле специализированный торгово-выставочный комплекс на Балтийской,
-            59. Это событие стало знаковым в истории компании.
-          </p>
-
-          <p>
-            Сейчас «Двери Алтая» — это предприятие, уверенно стоящее на ногах, с перспективами активного развития. Это
-            комплекс, площадью более 1300 м2 , в котором находятся более 7000 дверных полотен в складском запасе и более
-            190 моделей дверей, выставленных в торговом зале. Теперь в шаговой доступности покупатель может не только
-            выбрать и оплатить товар, но и самостоятельно его забрать (особенно это удобно для клиентов, живущих за
-            городом, приезжающих на своём транспорте). Преимуществами компании также являются: высококвалифицированный
-            персонал; профессиональная монтажная служба; гарантийное и постгарантийное обслуживание; рассрочка платежа
-            (оформление на месте).
-          </p>
-
+        <h2 class="sections__title">Ваша корзина</h2>
+        <section class="cart page-section">
+          <div class="cart__wrapper">
+            <div class="cart__item cart-item">
+              <a class="cart-item__image" href="product-page.html">
+                <img src="img/images/cards/card-1.png" alt="Входная дверь мдф с двух сторон - ГТ 19">
+              </a>
+              <div class="cart-item__data">
+                <a class="cart-item__title" href="product-page.html">Входная дверь мдф с&nbsp;двух сторон&nbsp;&mdash; ГТ&nbsp;19</a>
+                <div class="cart-item__props">
+                  <span>Артикул: 3221376</span>
+                  <span>Цвет: Черный муар / Ясень белый</span>
+                  <span>Открывание: Левое</span>
+                </div>
+              </div>
+              <div class="cart-item__order">
+                <div class="cart-item__counter">
+                  <div class="product__price-counter">
+                    <button type="button" class="counter-btn counter-btn__minus" data-direction="minus">
+                      <span></span>
+                    </button>
+                    <input type="text" id="quantity" value="1" class="quantity-input counter__value" data-max-value="99"
+                      data-min-value="1" onchange="handleChange(this)">
+                    <button type="button" class="counter-btn counter-btn__plus" data-direction="plus">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="cart-item__price">
+                  <span class="price-quantity">1 x 5 688 ₽</span>
+                  <span class="price-total">5 688 ₽</span>
+                </div>
+              </div>
+              <div class="cart-item__delete">
+                <button class="cart-item__delete"></button>
+              </div>
+            </div>
+            <button class="btn-order popup-btn" data-popup-btn-id="order">Оформить заказ</button>
+          </div>
         </section>
-
-        <section class="staff page-section">
-          <h3 class="staff__title">Персонал</h3>
-          <ul class="staff__list">
-            <li class="staff__item">
-              <div class="staff__img">
-                <img src="img/icons/stuff-1.png" alt="Данилов Елисей Сергеевич
-                Руководитель торгового зала">
-              </div>
-              <div class="staff__name">
-                Данилов Елисей Сергеевич<br>
-                Руководитель торгового зала
-              </div>
-            </li>
-
-            <li class="staff__item">
-              <div class="staff__img">
-                <img src="img/icons/stuff-2.png" alt="Быкова Виктория Артёмовна
-                Руководитель торгового зала">
-              </div>
-              <div class="staff__name">
-                Быкова Виктория Артёмовна<br>
-                Руководитель торгового зала
-              </div>
-            </li>
-
-            <li class="staff__item">
-              <div class="staff__img">
-                <img src="img/icons/stuff-1.png" alt="Денисова Алёна Артёмовна
-                Руководитель торгового зала">
-              </div>
-              <div class="staff__name">
-                Денисова Алёна Артёмовна<br>
-                Руководитель торгового зала
-              </div>
-            </li>
-
-            <li class="staff__item">
-              <div class="staff__img">
-                <img src="img/icons/stuff-2.png" alt="Горохов Максим Егорович
-                Руководитель торгового зала">
-              </div>
-              <div class="staff__name">
-                Горохов Максим Егорович<br>
-                Руководитель торгового зала
-              </div>
-            </li>
-          </ul>
-        </section>
+        
       </div>
 
     </main>
@@ -707,8 +677,9 @@
     </div>
   </div>
 
-  <button class="scrollup" id="buttonUp" aria-label="Прокрутить страницу вверх"></button>
 
+  <button class="scrollup" id="buttonUp" aria-label="Прокрутить страницу вверх"></button>
+  
   <script src="js/slick.min.js"></script>
   <script src="js/main.min.js"></script>
   <!-- IvBo -->

@@ -7,6 +7,9 @@
 
 $(document).ready(function () {
 
+
+  // sliders
+
   $('.slider').slick({
     arrows: true,
     dots: true,
@@ -69,6 +72,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
+    margin: '10px',
     responsive: [{
         breakpoint: 1200,
         settings: {
@@ -103,7 +107,88 @@ $(document).ready(function () {
     ]
   });
 
+  $('.similar-slider').slick({
+    arrows: true,
+    dots: true,
+    lazyLoad: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    margin: '10px',
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          swipeToSlide: true,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+          swipeToSlide: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          swipeToSlide: true,
+        }
+      },
+    ]
+  });
 
+  $('.product__top-slider').slick({
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    asNavFor: '.product__nav-slider',
+    variableWidth: true,
+    responsive: [{
+      breakpoint: 700,
+      settings: {
+
+      }
+    },
+    {
+      breakpoint: 479,
+      settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,  
+      centerMode: true,
+      centerPadding: '10px',
+      }
+    }
+  ]
+  });
+
+  $('.product__nav-slider').slick({
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.product__top-slider',
+    arrows: false,
+    dots: false,
+    infinite: true,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: '40px',
+      }
+    }]
+  });
 });
 
 
@@ -112,6 +197,118 @@ $(document).ready(function () {
 
 
 
+// disable a link for an inaccessible product 
+
+const productLinks = document.querySelectorAll('.card.card__not-available');
+console.log(productLinks);
+
+if (productLinks) {
+  productLinks.forEach((el) => {
+    el.querySelector('a.card__link').addEventListener('click', function(event) {
+      event.preventDefault();
+    });
+
+  });
+}
+
+
+// Tabs
+
+const tabsBtns = document.querySelectorAll('.tabs__nav-btn');
+const tabsItems = document.querySelectorAll('.tabs__item');
+
+tabsBtns.forEach(onTabClick);
+
+function onTabClick(el) {
+  el.addEventListener('click', function () {
+    let currentBtn = el;
+    let tabId = currentBtn.getAttribute('data-tab');
+    let currentTab = document.querySelector(tabId);
+
+    if (!currentBtn.classList.contains('_active')) {
+      tabsBtns.forEach(el => {
+        el.classList.remove('_active');
+      });
+
+      tabsItems.forEach(el => {
+        el.classList.remove('_active');
+      });
+
+      currentBtn.classList.add('_active');
+      currentTab.classList.add('_active');
+    }
+  });
+}
+
+
+
+// const printFullPrice = () => {
+//   currentPriceBox.textContent = `${normalPrice(price)} ₽`;
+// };
+
+// Подсчёт общей суммы за товар
+
+const counterBtns = document.querySelectorAll('.counter-btn');
+
+if (counterBtns) {
+
+  let price = 0;
+  const plusFullPrice = (currentPrice) => {
+    return price += currentPrice;
+  };
+
+  counterBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const direction = this.dataset.direction;
+      const maxInputValue = +this.parentElement.querySelector('.counter__value').dataset.maxValue;
+      const minInputValue = +this.parentElement.querySelector('.counter__value').dataset.minValue;
+      const input = this.parentElement.querySelector('.counter__value');
+      const currentInputValue = +input.value;
+      let newInputValue;
+      if (direction === 'plus') {
+        newInputValue = currentInputValue + 1 < maxInputValue ? currentInputValue + 1 : maxInputValue;
+      }
+
+      if (direction === 'minus') {
+        newInputValue = currentInputValue - 1 > minInputValue ? currentInputValue - 1 : minInputValue;
+      }
+
+
+      input.value = newInputValue;
+
+
+    });
+  });
+}
+
+// Ограничение диапозона вводимых значений для input
+function handleChange(input) {
+
+  let minChangeValue = 1;
+  let maxChangeValue = 99;
+
+  if (input.value < minChangeValue) {
+    input.value = minChangeValue;
+  }
+  if (input.value > maxChangeValue) {
+    input.value = maxChangeValue;
+  }
+
+}
+
+// Кнопки на странице продукта
+
+const productBtns = document.querySelectorAll('.product-btn');
+
+if (productBtns) {
+  for (let i = 0; i < productBtns.length; i++) {
+    const el = productBtns[i];
+    el.addEventListener('click', () => {
+      el.classList.toggle('_active');
+    });
+  }
+}
+
 
 // Растягивает div под самый большой из них
 
@@ -119,7 +316,7 @@ if (document.querySelectorAll('.alignment-block')) {
   const alignmentBlocksToHight = function () {
     let maxHeight = 0;
     let alignmentBlocks = document.querySelectorAll('.alignment-block');
-  
+
     if (alignmentBlocks) {
       for (let i = 0; i < alignmentBlocks.length; i++) {
         const el = alignmentBlocks[i];
@@ -127,15 +324,17 @@ if (document.querySelectorAll('.alignment-block')) {
           maxHeight = el.offsetHeight;
         }
       }
-  
+
       for (let i = 0; i < alignmentBlocks.length; i++) {
         const el = alignmentBlocks[i];
         el.style.minHeight = `${maxHeight}px`;
       }
     }
-  
+
   };
   window.addEventListener('load', alignmentBlocksToHight);
+  window.addEventListener('resize', alignmentBlocksToHight);
+
 }
 
 
@@ -212,13 +411,13 @@ if (document.querySelector('.sidebar')) {
     sidebar = document.querySelector('.sidebar'),
     container = document.querySelector('.page__container-sidebar'),
     gutter = 20,
-    offsetLeft = container.offsetLeft + gutter,
     sidebarOffsetTop = sidebar.offsetTop,
     sidebarWidth = sidebar.offsetWidth,
     smallOffset = gutter;
 
   const fixedScrollBlock = () => {
-    let scrollDistance = window.scrollY;
+    let scrollDistance = window.scrollY,
+    offsetLeft = container.offsetLeft + gutter;
 
     if (scrollDistance > (sidebarOffsetTop - smallOffset) && scrollDistance <= (sidebar.offsetHeight + sidebarOffsetTop)) {
       fixedBlock.style.left = `${offsetLeft}px`;
@@ -239,6 +438,7 @@ if (document.querySelector('.sidebar')) {
     }
   };
 
+  window.addEventListener('resize', fixedScrollBlock);
   window.addEventListener('scroll', fixedScrollBlock);
 }
 
@@ -256,19 +456,19 @@ if (filterBtn) {
   filterBtn.addEventListener('click', () => {
     catalogFilters.classList.toggle('active');
     document.body.classList.toggle('_lock');
-    overlay.style.display = "block";
+    overlay.style.display = 'block';
   });
 
   catalogCloseBtn.addEventListener('click', () => {
     catalogFilters.classList.remove('active');
     document.body.classList.remove('_lock');
-    overlay.style.display = "none";
+    overlay.style.display = 'none';
   });
 
   overlay.addEventListener('click', () => {
     catalogFilters.classList.remove('active');
     document.body.classList.remove('_lock');
-    overlay.style.display = "none";
+    overlay.style.display = 'none';
   });
 }
 
@@ -277,7 +477,7 @@ if (filterBtn) {
 const buttonUp = document.querySelector('#buttonUp');
 
 if (buttonUp) {
-  
+
   const scrollSpacing = 500;
 
   buttonUp.addEventListener('click', () => {
@@ -292,7 +492,7 @@ if (buttonUp) {
   };
 
   let appearBtn = function () {
-    if(document.body.scrollTop > scrollSpacing || document.documentElement.scrollTop > scrollSpacing) {
+    if (document.body.scrollTop > scrollSpacing || document.documentElement.scrollTop > scrollSpacing) {
       buttonUp.classList.add('active');
     } else {
       buttonUp.classList.remove('active');
@@ -336,7 +536,7 @@ if (popupLinks.length > 0) {
       popupOpen(curentPopup);
       e.preventDefault();
     });
-  } 
+  }
 }
 
 const popupCloseIcon = document.querySelectorAll('.close-popup');
@@ -429,34 +629,53 @@ document.addEventListener('keydown', function (e) {
 const rangeSlider = document.getElementById('range-slider');
 
 if (rangeSlider) {
-	noUiSlider.create(rangeSlider, {
+  noUiSlider.create(rangeSlider, {
     start: [5000, 75000],
-		connect: true,
-		step: 1,
+    connect: true,
+    step: 1,
     range: {
-			'min': [5000],
-			'max': [75000]
+      'min': [5000],
+      'max': [75000]
     }
-	});
+  });
 
-	const input0 = document.getElementById('input-0');
-	const input1 = document.getElementById('input-1');
-	const inputs = [input0, input1];
+  const input0 = document.getElementById('input-0');
+  const input1 = document.getElementById('input-1');
+  const inputs = [input0, input1];
 
-	rangeSlider.noUiSlider.on('update', function(values, handle){
-		inputs[handle].value = Math.round(values[handle]);
-	});
+  rangeSlider.noUiSlider.on('update', function (values, handle) {
+    inputs[handle].value = Math.round(values[handle]);
+  });
 
-	const setRangeSlider = (i, value) => {
-		let arr = [null, null];
-		arr[i] = value;
+  const setRangeSlider = (i, value) => {
+    let arr = [null, null];
+    arr[i] = value;
 
-		rangeSlider.noUiSlider.set(arr);
-	};
+    rangeSlider.noUiSlider.set(arr);
+  };
 
-	inputs.forEach((el, index) => {
-		el.addEventListener('change', (e) => {
-			setRangeSlider(index, e.currentTarget.value);
-		});
-	});
+  inputs.forEach((el, index) => {
+    el.addEventListener('change', (e) => {
+      setRangeSlider(index, e.currentTarget.value);
+    });
+  });
 }
+
+
+
+
+
+//preloader
+
+
+let preloader = document.querySelector('.preloader');
+
+window.addEventListener('load', () => {
+  preloader.classList.add('_hide');
+  setTimeout(() => {
+    preloader.remove();
+    if (document.body.classList.contains('_lock')) {
+      document.body.removeAttribute('class');
+    }
+  }, 800);
+});

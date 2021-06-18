@@ -3,6 +3,7 @@
 .sidebar {
     flex: 0 0 250px;
     position: relative;
+    margin-right: auto;
     // padding: 0px 0px 0px $gutter;
     @media (max-width: $md2+px) {
         display: none;
@@ -172,9 +173,6 @@
 
 .hits {
 
-    &__container {
-    }
-
     &__title {
         margin: 0px 0px $title-margin 0px;
     }
@@ -315,43 +313,6 @@
 
 
 
-.states {
-    font-size: 16px;
-    width: 100%;
-    color: #fff;
-    padding: 10px 14px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    align-items: flex-start;
-    gap: 5px;
-    z-index: 3;
-}
-
-
-.hit {
-    padding: 5px 10px;
-    border-radius: 0px 100px 100px 0px;
-    box-shadow: 3px 3px 7px #000;
-    background-color: $main-color;
-    display: none;
-}
-.sale {
-    padding: 5px 10px;
-    border-radius: 0px 100px 100px 0px;
-    box-shadow: 3px 3px 7px #000;
-    background-color: rgb(230, 0, 0);
-    display: none;
-}
-.not-available {
-    padding: 5px 10px;
-    border-radius: 0px 100px 100px 0px;
-    box-shadow: none;
-    background-color: rgb(179, 179, 179);
-    display: none;
-}
 
 .card__hit .hit{
     display: inline-block;
@@ -402,9 +363,6 @@
 // advantages
 
 .advantages {
-
-    &__container {
-    }
 
     &__title {
         margin: 0px 0px $title-margin 0px;
@@ -467,9 +425,7 @@
 
 
 .manufacturers {
-    &__container {
-    }
-    
+   
     &__title {
         margin: 0px 0px $title-margin 0px;
     }

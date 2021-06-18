@@ -21,14 +21,20 @@
   &__list-item {
     color: rgba(0, 0, 0, 0.5);
     font-size: 13px;
+    a{
+      display: inline-block;
+      margin: 0px 0px 5px 0px;
+    }
+
+    span{
+      display: inline-block;
+      margin: 0px 0px 5px 0px;
+    }
 
   }
 
 }
 
-.promotion-banners {
-
-}
 .banner-promotion-link {
   display: block;
   width: 100%;

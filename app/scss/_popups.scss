@@ -12,7 +12,8 @@
   overflow-x: hidden;
   overflow-y: auto;
   transition: all 0.5s ease 0s;
-  z-index: 1000;
+  z-index: 1200;
+
   &__body {
     min-height: 100%;
     display: flex;
@@ -88,6 +89,14 @@
 .popup.open{
   opacity: 1;
   visibility: visible;
+}
+
+.popup-link{
+  pointer-events: none;
+}
+
+.popup.open .popup-link {
+  pointer-events: auto;
 }
 
 .popup.open .popup__content{
