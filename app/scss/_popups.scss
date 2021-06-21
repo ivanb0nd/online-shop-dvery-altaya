@@ -33,16 +33,38 @@
     transform: translate(0px, -100%);
   }
 
+  &__back{
+    background: url(../img/icons/back-arrow.svg) center / contain no-repeat;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease 0s;
+    opacity: 1;
+
+    &:hover{
+      opacity: 1;
+    }
+    @media (min-width: $md2+px) {
+      opacity: .5;
+    }
+  }
+
   &__close {
     width: 30px;
     height: 30px;
-    color: #000;
+    color: #333;
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
     transition: all 0.3s ease 0s;
     opacity: 1;
+
+
     &::after, &::before {
       top: 0;
       left: 50%;
@@ -66,6 +88,8 @@
       opacity: .5;
     }
   }
+
+
 
   &__title {
     font-size: 25px;
@@ -91,9 +115,7 @@
   visibility: visible;
 }
 
-.popup-link{
-  pointer-events: none;
-}
+
 
 .popup.open .popup-link {
   pointer-events: auto;

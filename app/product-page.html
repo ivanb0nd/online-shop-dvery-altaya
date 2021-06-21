@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="_lock">
+<body>
 
   <div class="preloader">
     <div class="preloader__circle"></div>
@@ -102,7 +102,7 @@
                       d="M1.61 15.86V19.61H5.36L16.42 8.54L12.67 4.79L1.61 15.86ZM21.22 16.97L16.97 21.22L11.77 16.02L13.54 14.25L14.54 15.25L17.01 12.77L18.43 14.19L16.97 15.61L18.03 16.61L19.45 15.21L21.22 16.97V16.97ZM5.22 9.44L0 4.25L4.25 0L6.01 1.77L3.54 4.25L4.61 5.31L7.07 2.83L8.49 4.25L7.07 5.66L8.07 6.66L5.22 9.44V9.44ZM19.32 5.61C19.71 5.22 19.71 4.61 19.32 4.2L16.98 1.9C16.61 1.51 15.96 1.51 15.57 1.9L13.73 3.73L17.48 7.48L19.32 5.61Z"
                       fill="white" />
                   </svg>
-                  <p>Заказать замер</p>
+                  <span>Заказать замер</span>
                 </button>
               </div>
 
@@ -135,7 +135,7 @@
                     d="M1.61 15.86V19.61H5.36L16.42 8.54L12.67 4.79L1.61 15.86ZM21.22 16.97L16.97 21.22L11.77 16.02L13.54 14.25L14.54 15.25L17.01 12.77L18.43 14.19L16.97 15.61L18.03 16.61L19.45 15.21L21.22 16.97V16.97ZM5.22 9.44L0 4.25L4.25 0L6.01 1.77L3.54 4.25L4.61 5.31L7.07 2.83L8.49 4.25L7.07 5.66L8.07 6.66L5.22 9.44V9.44ZM19.32 5.61C19.71 5.22 19.71 4.61 19.32 4.2L16.98 1.9C16.61 1.51 15.96 1.51 15.57 1.9L13.73 3.73L17.48 7.48L19.32 5.61Z"
                     fill="white" />
                 </svg>
-                <p>Заказать замер</p>
+                <span>Заказать замер</span>
               </button>
             </div>
           </div>
@@ -452,7 +452,7 @@
           </div>
         </section>
 
-        <section class="description page-section">
+        <div class="description page-section">
           <div class="description__tabs tabs">
             <div class="tabs__nav">
               <button class="tabs__nav-btn _active" type="button" data-tab="#tab-1">Описание</button>
@@ -508,14 +508,14 @@
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         <h2 class="sections__title">Похожие товары</h2>
-        <section class="similar page-section">
+        <div class="similar page-section">
           <div class="similar__container container page-section">
             <div class="similar-slider">
               <div class="similar-slider__item">
-                <article class="card card__hit">
+                <div class="card card__hit">
                   <div class="card__states states">
                     <div class="sale">Скидка</div>
                     <div class="hit">Хит</div>
@@ -535,11 +535,11 @@
                     <button class="card__btn-add">В корзину</button>
                     <button class="card__favorite"></button>
                   </div>
-                </article>
+                </div>
               </div>
 
               <div class="similar-slider__item">
-                <article class="card card__sale card__hit">
+                <div class="card card__sale card__hit">
                   <div class="card__states states">
                     <div class="sale">Скидка</div>
                     <div class="hit">Хит</div>
@@ -559,11 +559,11 @@
                     <button class="card__btn-add">В корзину</button>
                     <button class="card__favorite"></button>
                   </div>
-                </article>
+                </div>
               </div>
 
               <div class="similar-slider__item">
-                <article class="card card__hit">
+                <div class="card card__hit">
                   <div class="card__states states">
                     <div class="sale">Скидка</div>
                     <div class="hit">Хит</div>
@@ -583,11 +583,11 @@
                     <button class="card__btn-add">В корзину</button>
                     <button class="card__favorite"></button>
                   </div>
-                </article>
+                </div>
               </div>
 
               <div class="similar-slider__item">
-                <article class="card card__sale card__hit">
+                <div class="card card__sale card__hit">
                   <div class="card__states states">
                     <div class="sale">Скидка</div>
                     <div class="hit">Хит</div>
@@ -608,11 +608,11 @@
                     <button class="card__btn-add">В корзину</button>
                     <button class="card__favorite"></button>
                   </div>
-                </article>
+                </div>
               </div>
 
               <div class="similar-slider__item">
-                <article class="card card__sale card__hit">
+                <div class="card card__sale card__hit">
                   <div class="card__states states">
                     <div class="sale">Скидка</div>
                     <div class="hit">Хит</div>
@@ -633,12 +633,12 @@
                     <button class="card__btn-add">В корзину</button>
                     <button class="card__favorite"></button>
                   </div>
-                </article>
+                </div>
               </div>
 
             </div>
           </div>
-        </section>
+        </div>
 
       </div>
 
@@ -764,12 +764,12 @@
 
             <div class="form-item">
               <label for="agree" class="form-item__name-agree">
-                <div class="form-item__checkbox">
+                <span class="form-item__checkbox">
                   <input type="checkbox" class="checkbox" id="agree" name="user-agree" checked>
                   <span>
                     Отправляя данную форму вы
                   </span>
-                </div>
+                </span>
                 <a class="form-item__link popup-link" href="#privacy-policy">соглашаетесь с обработкой
                   персональных данных и политикой конфиденциальности</a>
               </label>
@@ -786,6 +786,7 @@
     <div class="popup" id="privacy-policy">
       <div class="popup__body">
         <div class="popup__content">
+          <button class="popup__back popup-btn" aria-label="Вернутся назад" data-popup-btn-id="order"></button>
           <button class="popup__close close-popup" aria-label="Закрыть модальное окно"></button>
           <h3 class="popup__title">Политика конфиденциальности и обработки персональных данных</h3>
           <p class="popup__text">

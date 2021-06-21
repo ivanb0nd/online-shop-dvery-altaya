@@ -7,9 +7,6 @@ body {
     font-size: 14px;
     overflow-x: hidden;
     position: relative;
-    &._lock{
-        overflow: hidden;
-    }
 }
 
 hr {
@@ -344,4 +341,11 @@ body.lock {
 
 ._hide{
     opacity: 0;
+}
+
+
+.list-title{
+    list-style: none !important;
+    margin: 0px 0px 20px 0px;
+    padding: 0 !important;
 }

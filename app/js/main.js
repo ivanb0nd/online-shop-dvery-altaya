@@ -670,12 +670,43 @@ if (rangeSlider) {
 
 let preloader = document.querySelector('.preloader');
 
-window.addEventListener('load', () => {
-  preloader.classList.add('_hide');
-  setTimeout(() => {
-    preloader.remove();
-    if (document.body.classList.contains('_lock')) {
-      document.body.removeAttribute('class');
-    }
-  }, 800);
-});
+if(preloader) {
+
+  window.addEventListener('load', () => {
+  
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    
+    body.style.paddingRight = lockPaddingValue;
+    body.classList.add('lock');
+
+    preloader.classList.add('_hide');
+    setTimeout(() => {
+      preloader.remove();
+      body.style.paddingRight = '0px';
+      body.classList.remove('lock');
+    }, 800);
+  });
+}
+
+
+// const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+
+// function bodyLock() {
+//   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+
+//   if (lockPadding.length > 0) {
+//     for (let i = 0; i < lockPadding.length; i++) {
+//       const el = lockPadding[i];
+//       el.style.paddingRight = lockPaddingValue;
+//     }
+//   }
+
+//   body.style.paddingRight = lockPaddingValue;
+//   body.classList.add('lock');
+
+//   unlock = false;
+//   setTimeout(function () {
+//     unlock = true;
+//   }, timeout);
+
+// }
