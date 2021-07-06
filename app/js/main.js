@@ -7,8 +7,6 @@
 
 $(document).ready(function () {
 
-  
-
   // sliders
 
   $('.slider').slick({
@@ -197,7 +195,6 @@ $(document).ready(function () {
 //Native JS
 
 
-
 // disable a link for an inaccessible product 
 
 const productLinks = document.querySelectorAll('.card.card__not-available');
@@ -211,7 +208,6 @@ if (productLinks) {
 
   });
 }
-
 
 // Tabs
 
@@ -240,12 +236,6 @@ function onTabClick(el) {
     }
   });
 }
-
-
-
-// const printFullPrice = () => {
-//   currentPriceBox.textContent = `${normalPrice(price)} ₽`;
-// };
 
 // Подсчёт общей суммы за товар
 
@@ -283,6 +273,7 @@ if (counterBtns) {
 }
 
 // Ограничение диапозона вводимых значений для input
+
 function handleChange(input) {
 
   let minChangeValue = 1;
@@ -310,7 +301,6 @@ if (productBtns) {
   }
 }
 
-
 // Растягивает div под самый большой из них
 
 if (document.querySelectorAll('.alignment-block')) {
@@ -337,10 +327,6 @@ if (document.querySelectorAll('.alignment-block')) {
   window.addEventListener('resize', alignmentBlocksToHight);
 
 }
-
-
-
-
 
 //menu burger
 
@@ -380,9 +366,7 @@ if (search) {
   });
 }
 
-
 // DropDown
-
 
 const arrow = document.querySelectorAll('.arrow');
 
@@ -399,10 +383,6 @@ for (let i = 0; i < arrow.length; i++) {
     thisArrow.classList.toggle('active');
   });
 }
-
-// menu__item-catalog
-
-
 
 
 // fixed catalog
@@ -442,9 +422,6 @@ if (document.querySelector('.sidebar')) {
   window.addEventListener('resize', fixedScrollBlock);
   window.addEventListener('scroll', fixedScrollBlock);
 }
-
-
-
 
 // filter mobile
 
@@ -502,7 +479,6 @@ if (buttonUp) {
 
   window.addEventListener('scroll', appearBtn);
 }
-
 
 // modal windows
 
@@ -662,12 +638,7 @@ if (rangeSlider) {
   });
 }
 
-
-
-
-
 //preloader
-
 
 let preloader = document.querySelector('.preloader');
 
@@ -689,25 +660,23 @@ if(preloader) {
   });
 }
 
+//
 
-// const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+const mobileResetBtn = document.querySelector('.catalog__reset-mobile');
+const resetBtn = document.querySelector('.catalog__reset');
 
-// function bodyLock() {
-//   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+if (resetBtn) {
 
-//   if (lockPadding.length > 0) {
-//     for (let i = 0; i < lockPadding.length; i++) {
-//       const el = lockPadding[i];
-//       el.style.paddingRight = lockPaddingValue;
-//     }
-//   }
+  let resetInputs = function() {
+    let filterInputs = document.querySelectorAll('.filter-input');
 
-//   body.style.paddingRight = lockPaddingValue;
-//   body.classList.add('lock');
-
-//   unlock = false;
-//   setTimeout(function () {
-//     unlock = true;
-//   }, timeout);
-
-// }
+    filterInputs.forEach((input) => {
+      if(input.checked == true) {
+        input.checked = false;
+      }
+    });
+  };
+  
+  mobileResetBtn.addEventListener('click', resetInputs);
+  resetBtn.addEventListener('click', resetInputs);
+}
