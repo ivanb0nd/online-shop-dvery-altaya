@@ -1,5 +1,3 @@
-
-
 .popup {
   position: fixed;
   width: 100%;
@@ -33,7 +31,7 @@
     transform: translate(0px, -100%);
   }
 
-  &__back{
+  &__back {
     background: url(../img/icons/back-arrow.svg) center / contain no-repeat;
     width: 30px;
     height: 30px;
@@ -45,9 +43,10 @@
     transition: all 0.3s ease 0s;
     opacity: 1;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
+
     @media (min-width: $md2+px) {
       opacity: .5;
     }
@@ -65,7 +64,8 @@
     opacity: 1;
 
 
-    &::after, &::before {
+    &::after,
+    &::before {
       top: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -75,21 +75,23 @@
       height: 30px;
       background-color: #333;
     }
-    &::after{
+
+    &::after {
       transform: rotate(45deg);
     }
-    &::before{
+
+    &::before {
       transform: rotate(-45deg);
     }
-    &:hover{
+
+    &:hover {
       opacity: 1;
     }
+
     @media (min-width: $md2+px) {
       opacity: .5;
     }
   }
-
-
 
   &__title {
     font-size: 25px;
@@ -107,21 +109,19 @@
     margin: 0px 0px 20px 0px;
   }
 
-  
+
 }
 
-.popup.open{
+.popup.open {
   opacity: 1;
   visibility: visible;
 }
-
-
 
 .popup.open .popup-link {
   pointer-events: auto;
 }
 
-.popup.open .popup__content{
+.popup.open .popup__content {
   opacity: 1;
   transform: translate(0px, 0px);
 }
@@ -133,6 +133,3 @@
 #privacy-policy .popup__text {
   text-align: justify;
 }
-
-
-

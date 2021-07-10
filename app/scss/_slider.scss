@@ -4,13 +4,14 @@
 }
 
 /* Лента слайдов */
-.slick-track{
+.slick-track {
     display: flex;
 }
 
 // Слайдер на главной странице 
 
-.slider-section{
+.slider-section {
+
     // padding: 0px $gutter 0px 0px;
     @media (max-width: $md2+px) {
         padding: 0;
@@ -22,15 +23,15 @@
     z-index: 1;
 }
 
-.slider__item{
+.slider__item {
     background-color: rgba(0, 0, 0, 1);
 }
 
-.slider__text{
+.slider__text {
     position: absolute;
     top: 40%;
     font-size: 48px;
-    line-height: 56 / 48 * 100%; 
+    line-height: 56 / 48 * 100%;
     font-weight: 300;
     max-width: 700px;
     left: 10%;
@@ -38,17 +39,21 @@
     color: #fff;
     text-align: start;
     white-space: nowrap;
+
     @media (max-width: 1120px) {
         font-size: 38px;
-        
+
     }
+
     @media (max-width: 960px) {
         font-size: 32px;
-        
+
     }
-    @media (max-width: 860px){
+
+    @media (max-width: 860px) {
         font-size: 28px;
     }
+
     @media (max-width: $md4+px) {
         font-size: 20px;
         right: 0;
@@ -67,13 +72,16 @@
     height: auto;
     object-fit: cover;
     filter: brightness(0.4);
+
     @media (max-width: $md2+px) {
         width: 100%;
         height: 400px;
     }
+
     @media (max-width: $md3+px) {
         height: 300px;
     }
+
     @media (max-width: $md4+px) {
         height: 250px;
     }
@@ -81,7 +89,7 @@
 
 
 
-.slider .slick-arrow{
+.slider .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -91,19 +99,20 @@
     height: 60px;
 }
 
-.slider .slick-arrow.slick-prev{
+.slider .slick-arrow.slick-prev {
     position: absolute;
     left: 0;
     height: 100%;
     width: 8%;
     transition: all 0.3s ease 0s;
-    &:hover{
+
+    &:hover {
         background-color: rgba(0, 0, 0, .5);
     }
-    
+
 }
 
-.slider .slick-arrow.slick-prev::before{
+.slider .slick-arrow.slick-prev::before {
     content: '';
     background: url(../img/icons/slider-arrow/arrow-left.svg) center center/ cover;
     position: absolute;
@@ -112,23 +121,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
 
 
-.slider .slick-arrow.slick-next{
+.slider .slick-arrow.slick-next {
     position: absolute;
     right: 0;
     height: 100%;
     width: 8%;
     transition: all 0.3s ease 0s;
-    &:hover{
+
+    &:hover {
         background-color: rgba(0, 0, 0, .5);
     }
-    
+
 }
 
-.slider .slick-arrow.slick-next::before{
+.slider .slick-arrow.slick-next::before {
     content: '';
     background: url(../img/icons/slider-arrow/arrow-right.svg) center center/ cover;
     position: absolute;
@@ -137,14 +147,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
 }
 
 
 
 
 
-.slider .slick-dots{
+.slider .slick-dots {
     position: absolute;
     display: flex;
     align-items: center;
@@ -153,13 +163,14 @@
     left: 0;
     right: 0;
 }
-.slider .slick-dots li{
+
+.slider .slick-dots li {
     list-style: none;
     margin: 0 6px;
 }
 
 
-.slider .slick-dots button{
+.slider .slick-dots button {
     font-size: 0;
     width: 10px;
     height: 10px;
@@ -171,7 +182,7 @@
 
 
 /* Активная точка */
-.slider .slick-dots li.slick-active button{
+.slider .slick-dots li.slick-active button {
     background-color: #fff;
     transition: all 0.3s ease 0s;
 }
@@ -182,11 +193,11 @@
 
 
 
-.hits-slider{
+.hits-slider {
     position: relative;
 }
 
-.hits-slider .slick-arrow{
+.hits-slider .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -196,19 +207,20 @@
     height: 60px;
 }
 
-.hits-slider .slick-prev{
+.hits-slider .slick-prev {
     position: absolute;
     left: -30px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         left: -15px;
     }
-    
+
 }
 
-.hits-slider .slick-prev::before{
+.hits-slider .slick-prev::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -221,28 +233,29 @@
     transition: all 0.3s linear 0s;
 }
 
-.hits-slider .slick-prev:hover::before{
-    
+.hits-slider .slick-prev:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
 
 
-.hits-slider .slick-next{
+.hits-slider .slick-next {
     position: absolute;
     right: -34px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         right: -15px;
     }
-    
+
 }
 
-.hits-slider .slick-next::before{
+.hits-slider .slick-next::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -251,21 +264,21 @@
     border-right: 7px solid #019b46;
     top: 50%;
     left: -10px;
-    transform: translateY(-50%)  rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     transition: all 0.3s linear 0s;
 }
 
-.hits-slider .slick-next:hover::before{
-    
+.hits-slider .slick-next:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
 
 
 
-.hits-slider .slick-dots{
+.hits-slider .slick-dots {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -274,13 +287,14 @@
     right: 0;
     // margin: 0px 0px 30px 0px;
 }
-.hits-slider .slick-dots li{
+
+.hits-slider .slick-dots li {
     list-style: none;
     margin: 0 6px;
 }
 
 
-.hits-slider .slick-dots button{
+.hits-slider .slick-dots button {
     font-size: 0;
     width: 10px;
     height: 10px;
@@ -288,6 +302,7 @@
     border-radius: 50%;
     background-color: #019b46;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 8px;
         height: 8px;
@@ -296,12 +311,13 @@
 
 
 /* Активная точка */
-.hits-slider .slick-dots li.slick-active button{
+.hits-slider .slick-dots li.slick-active button {
     background-color: #005f2b;
     width: 17px;
     height: 17px;
     align-self: center;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 14px;
         height: 14px;
@@ -319,11 +335,11 @@
 // promotion cards slider 
 
 
-.promotion-slider{
+.promotion-slider {
     position: relative;
 }
 
-.promotion-slider .slick-arrow{
+.promotion-slider .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -333,19 +349,20 @@
     height: 60px;
 }
 
-.promotion-slider .slick-prev{
+.promotion-slider .slick-prev {
     position: absolute;
     left: -30px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         left: -15px;
     }
-    
+
 }
 
-.promotion-slider .slick-prev::before{
+.promotion-slider .slick-prev::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -358,28 +375,29 @@
     transition: all 0.3s linear 0s;
 }
 
-.promotion-slider .slick-prev:hover::before{
-    
+.promotion-slider .slick-prev:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
 
 
-.promotion-slider .slick-next{
+.promotion-slider .slick-next {
     position: absolute;
     right: -34px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         right: -15px;
     }
-    
+
 }
 
-.promotion-slider .slick-next::before{
+.promotion-slider .slick-next::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -388,21 +406,21 @@
     border-right: 7px solid #019b46;
     top: 50%;
     left: -10px;
-    transform: translateY(-50%)  rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     transition: all 0.3s linear 0s;
 }
 
-.promotion-slider .slick-next:hover::before{
-    
+.promotion-slider .slick-next:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
 
 
 
-.promotion-slider .slick-dots{
+.promotion-slider .slick-dots {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -411,13 +429,14 @@
     right: 0;
     // margin: 0px 0px 30px 0px;
 }
-.promotion-slider .slick-dots li{
+
+.promotion-slider .slick-dots li {
     list-style: none;
     margin: 0 6px;
 }
 
 
-.promotion-slider .slick-dots button{
+.promotion-slider .slick-dots button {
     font-size: 0;
     width: 10px;
     height: 10px;
@@ -425,6 +444,7 @@
     border-radius: 50%;
     background-color: #019b46;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 8px;
         height: 8px;
@@ -433,12 +453,13 @@
 
 
 /* Активная точка */
-.promotion-slider .slick-dots li.slick-active button{
+.promotion-slider .slick-dots li.slick-active button {
     background-color: #005f2b;
     width: 17px;
     height: 17px;
     align-self: center;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 14px;
         height: 14px;
@@ -455,11 +476,11 @@
 
 
 
-.similar-slider{
+.similar-slider {
     position: relative;
 }
 
-.similar-slider .slick-arrow{
+.similar-slider .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -469,19 +490,20 @@
     height: 60px;
 }
 
-.similar-slider .slick-prev{
+.similar-slider .slick-prev {
     position: absolute;
     left: -30px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         left: -15px;
     }
-    
+
 }
 
-.similar-slider .slick-prev::before{
+.similar-slider .slick-prev::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -494,26 +516,27 @@
     transition: all 0.3s linear 0s;
 }
 
-.similar-slider .slick-prev:hover::before{
-    
+.similar-slider .slick-prev:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
-.similar-slider .slick-next{
+.similar-slider .slick-next {
     position: absolute;
     right: -34px;
     height: 20%;
     width: 5%;
     transition: all 0.3s ease 0s;
-    @media (max-width: 1200px){
+
+    @media (max-width: 1200px) {
         right: -15px;
     }
-    
+
 }
 
-.similar-slider .slick-next::before{
+.similar-slider .slick-next::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -522,18 +545,18 @@
     border-right: 7px solid #019b46;
     top: 50%;
     left: -10px;
-    transform: translateY(-50%)  rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     transition: all 0.3s linear 0s;
 }
 
-.similar-slider .slick-next:hover::before{
-    
+.similar-slider .slick-next:hover::before {
+
     border-top: 7px solid #005f2b;
     border-right: 7px solid #005f2b;
-    
+
 }
 
-.similar-slider .slick-dots{
+.similar-slider .slick-dots {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -542,13 +565,14 @@
     right: 0;
     // margin: 0px 0px 30px 0px;
 }
-.similar-slider .slick-dots li{
+
+.similar-slider .slick-dots li {
     list-style: none;
     margin: 0 6px;
 }
 
 
-.similar-slider .slick-dots button{
+.similar-slider .slick-dots button {
     font-size: 0;
     width: 10px;
     height: 10px;
@@ -556,6 +580,7 @@
     border-radius: 50%;
     background-color: #019b46;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 8px;
         height: 8px;
@@ -564,12 +589,13 @@
 
 
 /* Активная точка */
-.similar-slider .slick-dots li.slick-active button{
+.similar-slider .slick-dots li.slick-active button {
     background-color: #005f2b;
     width: 17px;
     height: 17px;
     align-self: center;
     transition: all 0.3s ease 0s;
+
     @media (max-width: $md3+px) {
         width: 14px;
         height: 14px;
@@ -580,4 +606,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}

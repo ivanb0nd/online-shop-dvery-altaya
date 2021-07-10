@@ -2,12 +2,15 @@
     display: block;
     position: relative;
     margin: 0px 0px 60px 0px;
+
     @media (max-width: $md2+px) {
         margin: 0px 0px 40px 0px;
     }
+
     @media (max-width: $md3+px) {
         margin: 0px 0px 20px 0px;
     }
+
     @media (max-width: $md4+px) {
         margin: 0px 0px 15px 0px;
     }
@@ -22,6 +25,7 @@
     background-color: #f3f2f2;
     position: relative;
     z-index: 1111;
+
     @media (max-width: $md2+px) {
 
         // padding: 15px 15px;
@@ -37,7 +41,6 @@
             z-index: 9;
         }
     }
-
 
     &__logo {
         // height: 47px;
@@ -115,7 +118,6 @@
         }
     }
 
-
     &__input-search input {
         width: 100%;
     }
@@ -133,7 +135,7 @@
             right: 0;
             overflow: auto;
             padding: 55px 0px 0px 0px;
-            background-color: rgba(255, 255, 255, 1);   
+            background-color: rgba(255, 255, 255, 1);
             z-index: 2;
 
             &._active {
@@ -149,6 +151,7 @@
         justify-content: center;
         align-items: center;
         margin: 0px 0px 20px 0px;
+
         @media (max-width: $md2+px) {
             flex-direction: column;
             align-items: flex-start;
@@ -156,6 +159,7 @@
             border-top: none;
             border-radius: 5px;
         }
+
         @media (min-width: $md2+px) {
             margin: 0;
         }
@@ -203,6 +207,7 @@
             display: block;
             font-size: 25px;
             line-height: 50px;
+
             &:after {
                 display: none;
             }
@@ -216,59 +221,60 @@
         }
     }
 
-    &__aside{
+    &__aside {
         padding: 0 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         @media (min-width: $md3+px) {
             display: none;
         }
     }
 
-    &__contacts{
+    &__contacts {
         display: flex;
         flex-direction: column;
     }
 
-    &__phone{
+    &__phone {
         font-size: 20px
     }
 }
 
-.menu li{
+.menu li {
     position: relative;
 }
 
 
-.sub-menu__list{
+.sub-menu__list {
     // display: none;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.3s ease 0s;
 }
 
-.sub-menu__list.open{
+.sub-menu__list.open {
     // display: block;
     max-height: 500px;
 }
 
-.menu__item-catalog{
+.menu__item-catalog {
     display: block;
+
     @media (min-width: $md2+px) {
         display: none;
     }
 }
 
 
-
-.sub-menu__list>li{
+.sub-menu__list>li {
     // background-color: rgba(0, 166, 76, .7);
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.sub-menu__link{
+.sub-menu__link {
     display: block;
     font-size: 25px;
     line-height: 50px;
@@ -276,13 +282,13 @@
     color: #000;
 }
 
-.sub-menu__link{
+.sub-menu__link {
     &:last-child {
-     border-bottom: none;    
+        border-bottom: none;
     }
 }
 
-.arrow{
+.arrow {
     position: absolute;
     right: 15px;
     top: 20px;
@@ -294,11 +300,9 @@
     transition: all 0.3s ease 0s;
 }
 
-.arrow.active{
+.arrow.active {
     transform: rotate(-180deg);
 }
-
-
 
 .menu-contacts {
 
@@ -329,7 +333,8 @@
         display: flex;
         align-items: center;
     }
-    &__location{
+
+    &__location {
         font-size: 20px;
         color: #000;
         // display: flex;
@@ -337,10 +342,11 @@
     }
 }
 
-.menu-block__btn .order-btn{
+.menu-block__btn .order-btn {
     padding: 15px 50px;
     font-size: 20px;
     margin: 0px 0px 30px 0px;
+
     @media (min-width: 550px) {
         display: none;
     }
@@ -348,9 +354,11 @@
 
 .secondheader {
     padding: 20px 10px;
+
     @media (max-width: $md3+px) {
         padding: 10px 10px;
     }
+
     &__container {
         display: flex;
         padding: 0;
@@ -373,17 +381,20 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
         @media (max-width: $md2+px) {
             flex: 1 1 33.33%;
         }
+
         @media (max-width: $md3+px) {
             justify-content: center;
 
         }
-        @media (max-width: 550px){
+
+        @media (max-width: 550px) {
             display: none;
         }
-        
+
     }
 
     &__third-block {
@@ -396,6 +407,7 @@
         @media (max-width: $md2+px) {
             flex: 1 1 33.33%;
         }
+
         @media (max-width: $md3+px) {
             display: none;
         }
@@ -410,11 +422,10 @@
         @media (max-width: $md2+px) {
             flex: 1 1 33.33%;
         }
-        
-        
+
+
     }
 }
-
 
 .second-block {
 
@@ -423,23 +434,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         @media (max-width: $md2+px) {
-            
+
             margin: 0px 0px 5px 0px;
         }
-        
+
     }
 
-   
+
 }
 
 .contacts {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
     @media (max-width: $md3+px) {
         display: none;
     }
+
     &__phone {
         position: relative;
         display: inline-block;
@@ -475,8 +489,8 @@
         display: flex;
         align-items: center;
         padding: 0px 0px 5px 0px;
-        @media (max-width: $md2+px) {
-        }
+
+        @media (max-width: $md2+px) {}
     }
 
     &__img {
@@ -529,7 +543,7 @@
         padding: 0px 10px 0px 0px;
     }
 
-  
+
 }
 
 .social {
@@ -551,7 +565,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media (max-width: 550px){
+
+    @media (max-width: 550px) {
         flex: 1 1 100%;
         justify-content: space-between;
     }
@@ -560,13 +575,14 @@
         justify-content: center;
     }
 
-    
+
 
     &__buttons {
         display: flex;
         justify-content: space-between;
-        @media (max-width: 550px){
-           width: 100%;
+
+        @media (max-width: 550px) {
+            width: 100%;
         }
     }
 
@@ -649,11 +665,7 @@
 }
 
 
-
-
-
-
-
+//burger
 .icon-menu {
     display: none;
 
@@ -701,51 +713,3 @@
         }
     }
 }
-
-
-
-/*
-//burger
-
-.icon-menu {
-    display: none;
-    @media (max-width: $md3 + px) {
-        display: block;
-        position: relative;
-        z-index: 5;
-        width: 30px;
-        height: 18px;
-        cursor: pointer;
-        span {
-            transition: all .3s ease 0s;
-            top: calc(50% - 1px);
-            left: 0;
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background-color: #000;
-            &:first-child {
-                top: 0;
-            }
-            &:last-child {
-                top: auto;
-                bottom: 0;
-            }
-        }
-        &._active{
-            span{
-                transform: scale(0);
-                &:first-child {
-                    transform: rotate(-45deg);
-                    top: calc(50% - 1px);
-                }
-                &:last-child {
-                    transform: rotate(45deg);
-                    top: calc(50% - 1px);
-                }
-            }
-        }
-    }
-}
-
-*/

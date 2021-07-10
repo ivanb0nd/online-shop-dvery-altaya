@@ -199,288 +199,328 @@
         <section class="catalog page-section">
           <div class="catalog__content grid">
 
-            
-              <div class="catalog__left">
-                <div class="catalog__filters">
-                  <div class="catalog__filters-top">
-                    <h3 class="catalog__subltitle">Фильтры</h3>
-                    <div class="catalog__actions">
-                      <button class="catalog__reset-mobile">Cбросить</button>
-                      <button class="catalog__close" aria-label="Закрыть меню фильтров"></button>
+
+            <div class="catalog__left">
+              <div class="catalog__filters">
+                <div class="catalog__filters-top">
+                  <h3 class="catalog__subltitle">Фильтры</h3>
+                  <div class="catalog__actions">
+                    <button class="catalog__reset-mobile">Cбросить</button>
+                    <button class="catalog__close" aria-label="Закрыть меню фильтров"></button>
+                  </div>
+                </div>
+                <div class="catalog__properties">
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Цена, руб.</div>
+                    <div class="catalog__prop-inner catalog-price">
+                      <div class="catalog-price__wrapper">
+                        <input type="text" class="catalog-price__input" id="input-0">
+                        <span class="catalog-price__dash">-</span>
+                        <input type="text" class="catalog-price__input" id="input-1">
+                      </div>
+                      <div class="catalog-price__element" id="range-slider"></div>
                     </div>
                   </div>
-                  <div class="catalog__properties">
-  
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Цена, руб.</div>
-                      <div class="catalog__prop-inner catalog-price">
-                        <div class="catalog-price__wrapper">
-                          <input type="text" class="catalog-price__input" id="input-0">
-                          <span class="catalog-price__dash">-</span>
-                          <input type="text" class="catalog-price__input" id="input-1">
-                        </div>
-                        <div class="catalog-price__element" id="range-slider"></div>
-                      </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Наличие</div>
+                    <div class="catalog__prop-inner catalog-radio">
+                      <label class="custom-radio option">
+                        <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability"
+                          value="Все">
+                        <span class="custom-radio__content">Все</span>
+                      </label>
+
+                      <label class="custom-radio option">
+                        <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability"
+                          value="В наличии">
+                        <span class="custom-radio__content">В наличии</span>
+                      </label>
+
+                      <label class="custom-radio option">
+                        <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability"
+                          value="На складе" disabled>
+                        <span class="custom-radio__content">На складе</span>
+                      </label>
+
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Наличие</div>
-                      <div class="catalog__prop-inner catalog-radio">
-                        <label class="custom-radio option">
-                          <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability" value="Все">
-                          <span class="custom-radio__content">Все</span>
-                        </label>
-    
-                        <label class="custom-radio option">
-                          <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability" value="В наличии">
-                          <span class="custom-radio__content">В наличии</span>
-                        </label>
-    
-                        <label class="custom-radio option">
-                          <input class="custom-radio__input visually-hidden filter-input" type="radio" name="availability" value="На складе" disabled>
-                          <span class="custom-radio__content">На складе</span>
-                        </label>
-    
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Стекло / Зеркало</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="GlassOrMirror[]" value="Со стеклом">
+                        <span class="custom-checkbox__content">Со стеклом</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="GlassOrMirror[]" value="С зеркалом">
+                        <span class="custom-checkbox__content">С зеркалом</span>
+                      </label>
+
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Стекло / Зеркало</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="GlassOrMirror[]" value="Со стеклом">
-                          <span class="custom-checkbox__content">Со стеклом</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="GlassOrMirror[]" value="С зеркалом">
-                          <span class="custom-checkbox__content">С зеркалом</span>
-                        </label>
-    
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Производитель</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="manufacturer[]" value="AxelDoors">
+                        <span class="custom-checkbox__content">AxelDoors</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="manufacturer[]" value="ESTET">
+                        <span class="custom-checkbox__content">ESTET</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="manufacturer[]" value="Сибирь Профиль">
+                        <span class="custom-checkbox__content">Сибирь Профиль</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="manufacturer[]" value="ЧДК">
+                        <span class="custom-checkbox__content">ЧДК</span>
+                      </label>
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Производитель</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="manufacturer[]" value="AxelDoors">
-                          <span class="custom-checkbox__content">AxelDoors</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="manufacturer[]" value="ESTET">
-                          <span class="custom-checkbox__content">ESTET</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="manufacturer[]" value="Сибирь Профиль">
-                          <span class="custom-checkbox__content">Сибирь Профиль</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="manufacturer[]" value="ЧДК">
-                          <span class="custom-checkbox__content">ЧДК</span>
-                        </label>
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Цвет</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Айс">
+                        <span class="custom-checkbox__content">Айс</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Беленый дуб">
+                        <span class="custom-checkbox__content">Беленый дуб</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Белое дерево" disabled>
+                        <span class="custom-checkbox__content">Белое дерево</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Вельвет" disabled>
+                        <span class="custom-checkbox__content">Вельвет</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Белый" disabled>
+                        <span class="custom-checkbox__content">Белый</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Клен айс">
+                        <span class="custom-checkbox__content">Клен айс</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Капучино">
+                        <span class="custom-checkbox__content">Капучино</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Керамик">
+                        <span class="custom-checkbox__content">Керамик</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Дуб скандинавский">
+                        <span class="custom-checkbox__content">Дуб скандинавский</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Дуб скальный">
+                        <span class="custom-checkbox__content">Дуб скальный</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Груша">
+                        <span class="custom-checkbox__content">Груша</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Вишня">
+                        <span class="custom-checkbox__content">Вишня</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Ель альпийская">
+                        <span class="custom-checkbox__content">Ель альпийская</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Шоко">
+                        <span class="custom-checkbox__content">Шоко</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Серый">
+                        <span class="custom-checkbox__content">Серый</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Венге">
+                        <span class="custom-checkbox__content">Венге</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Перламутр">
+                        <span class="custom-checkbox__content">Перламутр</span>
+                      </label>
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="color[]" value="Онтарио">
+                        <span class="custom-checkbox__content">Онтарио</span>
+                      </label>
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Цвет</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Айс">
-                          <span class="custom-checkbox__content">Айс</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Беленый дуб">
-                          <span class="custom-checkbox__content">Беленый дуб</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Белое дерево"
-                            disabled>
-                          <span class="custom-checkbox__content">Белое дерево</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Вельвет"
-                            disabled>
-                          <span class="custom-checkbox__content">Вельвет</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Белый"
-                            disabled>
-                          <span class="custom-checkbox__content">Белый</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Клен айс">
-                          <span class="custom-checkbox__content">Клен айс</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Капучино">
-                          <span class="custom-checkbox__content">Капучино</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Керамик">
-                          <span class="custom-checkbox__content">Керамик</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Дуб скандинавский">
-                          <span class="custom-checkbox__content">Дуб скандинавский</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Дуб скальный">
-                          <span class="custom-checkbox__content">Дуб скальный</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Груша">
-                          <span class="custom-checkbox__content">Груша</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Вишня">
-                          <span class="custom-checkbox__content">Вишня</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Ель альпийская">
-                          <span class="custom-checkbox__content">Ель альпийская</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Шоко">
-                          <span class="custom-checkbox__content">Шоко</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Серый">
-                          <span class="custom-checkbox__content">Серый</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Венге">
-                          <span class="custom-checkbox__content">Венге</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Перламутр">
-                          <span class="custom-checkbox__content">Перламутр</span>
-                        </label>
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="color[]" value="Онтарио">
-                          <span class="custom-checkbox__content">Онтарио</span>
-                        </label>
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Использование во влажных помещениях</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="wetPremises[]" value="Да">
+                        <span class="custom-checkbox__content">Да</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="wetPremises[]" value="Нет">
+                        <span class="custom-checkbox__content">Нет</span>
+                      </label>
+
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Использование во влажных помещениях</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="wetPremises[]" value="Да">
-                          <span class="custom-checkbox__content">Да</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="wetPremises[]" value="Нет">
-                          <span class="custom-checkbox__content">Нет</span>
-                        </label>
-    
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Конструкция</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="construction[]" value="Царговые">
+                        <span class="custom-checkbox__content">Царговые</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="construction[]" value="Щитовые">
+                        <span class="custom-checkbox__content">Щитовые</span>
+                      </label>
+
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Конструкция</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="construction[]" value="Царговые">
-                          <span class="custom-checkbox__content">Царговые</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="construction[]" value="Щитовые">
-                          <span class="custom-checkbox__content">Щитовые</span>
-                        </label>
-    
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Остекление</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Белое">
+                        <span class="custom-checkbox__content">Белое</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Графит">
+                        <span class="custom-checkbox__content">Графит</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Зеркало">
+                        <span class="custom-checkbox__content">Зеркало</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Лакобель">
+                        <span class="custom-checkbox__content">Лакобель</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="С пескоструйным рисунком">
+                        <span class="custom-checkbox__content">С пескоструйным рисунком</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="С узким стеклом">
+                        <span class="custom-checkbox__content">С узким стеклом</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Светлое">
+                        <span class="custom-checkbox__content">Светлое</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Темное">
+                        <span class="custom-checkbox__content">Темное</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="glazing[]" value="Фьюзинг">
+                        <span class="custom-checkbox__content">Фьюзинг</span>
+                      </label>
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Остекление</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Белое">
-                          <span class="custom-checkbox__content">Белое</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Графит">
-                          <span class="custom-checkbox__content">Графит</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Зеркало">
-                          <span class="custom-checkbox__content">Зеркало</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Лакобель">
-                          <span class="custom-checkbox__content">Лакобель</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="С пескоструйным рисунком">
-                          <span class="custom-checkbox__content">С пескоструйным рисунком</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="С узким стеклом">
-                          <span class="custom-checkbox__content">С узким стеклом</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Светлое">
-                          <span class="custom-checkbox__content">Светлое</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Темное">
-                          <span class="custom-checkbox__content">Темное</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="glazing[]" value="Фьюзинг">
-                          <span class="custom-checkbox__content">Фьюзинг</span>
-                        </label>
-                      </div>
+                  </div>
+
+                  <div class="catalog__prop">
+                    <div class="catalog__caption">Комплектация</div>
+                    <div class="catalog__prop-inner catalog-checkbox">
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="equipment[]" value="Без наличников">
+                        <span class="custom-checkbox__content">Без наличников</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="equipment[]" value="Двери в сборе">
+                        <span class="custom-checkbox__content">Двери в сборе</span>
+                      </label>
+
+                      <label class="custom-checkbox option">
+                        <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox"
+                          name="equipment[]" value="С коробкой">
+                        <span class="custom-checkbox__content">С коробкой</span>
+                      </label>
                     </div>
-    
-                    <div class="catalog__prop">
-                      <div class="catalog__caption">Комплектация</div>
-                      <div class="catalog__prop-inner catalog-checkbox">
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="equipment[]" value="Без наличников">
-                          <span class="custom-checkbox__content">Без наличников</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="equipment[]" value="Двери в сборе">
-                          <span class="custom-checkbox__content">Двери в сборе</span>
-                        </label>
-    
-                        <label class="custom-checkbox option">
-                          <input class="custom-checkbox__input visually-hidden filter-input" type="checkbox" name="equipment[]" value="С коробкой">
-                          <span class="custom-checkbox__content">С коробкой</span>
-                        </label>
-                      </div>
-                    </div>
-    
-                    <div class="catalog__btns">
-                      <button class="catalog__apply">Применить</button>
-                      <button class="catalog__reset">сбросить</button>
-                    </div>
-                  </div> 
-  
+                  </div>
+
+                  <div class="catalog__btns">
+                    <button class="catalog__apply">Применить</button>
+                    <button class="catalog__reset">сбросить</button>
+                  </div>
                 </div>
+
               </div>
-        
+            </div>
+
 
             <div class="catalog__grid">
               <div class="catalog__filters-btn">

@@ -1,10 +1,9 @@
-
 // Variables
 
 $minWidth: 320px;
 // $maxWidth: 1920;  - для отзывчивости, адаптивного шрифта и прочего
 $maxWidthContainer: 1444;
-$md1: $maxWidthContainer + 12;
+$md1: $maxWidthContainer+12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -17,26 +16,25 @@ $md4: 479.98;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    &._loaded{
-        
-    }
 }
 
 
 // Адаптивная сетка
-.container{
+.container {
     max-width: $maxWidthContainer + px;
     margin: 0 auto;
-    
-    @media (max-width: $md1 + px){
+
+    @media (max-width: $md1 + px) {
         max-width: 970px;
         // padding: 0 10px;
     }
-    @media (max-width: $md2 + px){
+
+    @media (max-width: $md2 + px) {
         max-width: 750px;
-        
+
     }
-    @media (max-width: $md3 + px){
+
+    @media (max-width: $md3 + px) {
         max-width: none;
         // padding: 0 10px;
     }
@@ -68,7 +66,7 @@ $md4: 479.98;
 // Подключение файлов стилей страниц и элементов
 @import 'header';
 @import 'home';
-@import 'footer'; 
+@import 'footer';
 
 // Стили других страниц
 

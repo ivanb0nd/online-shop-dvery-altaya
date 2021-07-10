@@ -20,18 +20,21 @@ hr {
 
 .page {
     flex: 1 1 auto;
-    &__container{
+
+    &__container {
         padding: 0 $gutter;
     }
-    &__container-sidebar{
+
+    &__container-sidebar {
         display: flex;
         gap: 30px;
         padding: 0 $gutter;
+
         @media (max-width: $md2+px) {
             padding: 0;
         }
     }
-    
+
 }
 
 .page-section {
@@ -41,7 +44,7 @@ hr {
 
 .relative {
     position: relative;
-    
+
 }
 
 .grid {
@@ -50,10 +53,10 @@ hr {
     gap: $grid-gap;
 }
 
-
 // АДАПТИВНЫЕ ИЗОБРАЖЕНИЯ
 ._ibg {
     position: relative;
+
     img {
         position: absolute;
         width: 100%;
@@ -63,12 +66,14 @@ hr {
         object-fit: cover;
     }
 }
+
 body.ie {
     ._ibg {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     ._ibg img {
         width: 0;
         height: 0;
@@ -77,46 +82,51 @@ body.ie {
     }
 }
 
-.title{
+.title {
     font-size: 48px;
     line-height: 56 / 48 * 100%;
     font-weight: 300;
     text-align: center;
+
     @media (max-width: $md2+px) {
         font-size: 40px;
     }
+
     @media (max-width: $md3+px) {
         font-size: 30px;
     }
+
     @media (max-width: $md4+px) {
         font-size: 25px;
     }
 }
 
-.sections__title{
+.sections__title {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
     color: #000;
     margin: 0px 0px 50px 0px;
+
     @media (max-width: $md2+px) {
         font-size: 20px;
     }
+
     @media (max-width: $md3+px) {
         // font-size: 16px;
     }
 }
 
 .fixed {
-	position: fixed;
-	top: $gutter;
-	left: 0;
+    position: fixed;
+    top: $gutter;
+    left: 0;
 }
 
 .absolute {
-	position: absolute;
-	bottom: 0;
-	left: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 body.lock {
@@ -132,10 +142,9 @@ body.lock {
     font-weight: 700;
 }
 
-
 //scroll-up button
 
-.scrollup{
+.scrollup {
     z-index: 100;
     width: 40px;
     height: 40px;
@@ -152,7 +161,7 @@ body.lock {
     transform: translateY(100%);
 }
 
-.scrollup.active{
+.scrollup.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0%);
@@ -178,9 +187,7 @@ body.lock {
 }
 
 
-
 // Стили состояния товаров
-
 
 .states {
     font-size: 16px;
@@ -195,16 +202,17 @@ body.lock {
     align-items: flex-start;
     gap: 5px;
     z-index: 3;
+
     @media (max-width: $md3+px) {
         font-size: 14px;
         top: 15px;
     }
-      @media (max-width: $md4+px) {
+
+    @media (max-width: $md4+px) {
         font-size: 12px;
         top: 10px;
     }
 }
-
 
 .hit {
     padding: 5px 10px;
@@ -212,34 +220,37 @@ body.lock {
     box-shadow: 3px 3px 7px #000;
     background-color: $main-color;
     display: none;
+
     @media (max-width: $md4+px) {
         padding: 5px 10px 5px 5px
     }
 }
+
 .sale {
     padding: 5px 10px;
     border-radius: 0px 100px 100px 0px;
     box-shadow: 3px 3px 7px #000;
     background-color: rgb(230, 0, 0);
     display: none;
+
     @media (max-width: $md4+px) {
         padding: 5px 10px 5px 5px
     }
 }
+
 .not-available {
     padding: 5px 10px;
     border-radius: 0px 100px 100px 0px;
     box-shadow: none;
     background-color: rgb(179, 179, 179);
     display: none;
+
     @media (max-width: $md4+px) {
         padding: 5px 10px 5px 5px
     }
 }
 
-
-
-.sale-number{
+.sale-number {
     display: none;
     position: absolute;
     right: 20px;
@@ -249,7 +260,8 @@ body.lock {
     border-radius: 100%;
     background-color: rgb(230, 0, 0);
     z-index: 1100;
-    &::after{
+
+    &::after {
         content: attr(data-sale-number);
         font-size: 18px;
         line-height: 18px;
@@ -267,19 +279,19 @@ body.lock {
         width: 40px;
         height: 40px;
 
-        &::after{
+        &::after {
             font-size: 15px;
             line-height: 15;
         }
     }
 }
 
-.price-rub{
+.price-rub {
     font-size: inherit;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.old-value{
+.old-value {
     text-decoration: line-through;
 }
 
@@ -288,7 +300,7 @@ body.lock {
 
 //preloader
 
-.preloader{ 
+.preloader {
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -299,7 +311,8 @@ body.lock {
     display: flex;
     justify-content: center;
     align-items: center;
-    &__circle{
+
+    &__circle {
         border: 0 solid transparent;
         border-radius: 50%;
         width: 150px;
@@ -307,8 +320,9 @@ body.lock {
         position: absolute;
         top: calc(50vh - 75px);
         left: calc(50vw - 75px);
+
         &::after,
-        &::before{
+        &::before {
             content: '';
             border: 1em solid $main-color;
             border-radius: 50%;
@@ -320,31 +334,35 @@ body.lock {
             animation: loader 2s linear infinite;
             opacity: 0;
         }
-        &::before{
+
+        &::before {
             animation-delay: 0.5s;
         }
     }
-    @keyframes loader{
-        0%{
-          transform: scale(0);
-          opacity: 0;
+
+    @keyframes loader {
+        0% {
+            transform: scale(0);
+            opacity: 0;
         }
-        50%{
-          opacity: 1;
+
+        50% {
+            opacity: 1;
         }
-        100%{
-          transform: scale(1);
-          opacity: 0;
+
+        100% {
+            transform: scale(1);
+            opacity: 0;
         }
-      }
+    }
 }
 
-._hide{
+._hide {
     opacity: 0;
 }
 
 
-.list-title{
+.list-title {
     list-style: none !important;
     margin: 0px 0px 20px 0px;
     padding: 0 !important;
