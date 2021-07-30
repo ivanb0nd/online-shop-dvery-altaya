@@ -1,0 +1,84 @@
+// Variables
+
+$minWidth: 320px;
+// $maxWidth: 1920;  - для отзывчивости, адаптивного шрифта и прочего
+$maxWidthContainer: 1444;
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+// Оболочка страницы
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+// Адаптивная сетка
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+
+    @media (max-width: $md1 + px) {
+        max-width: 970px;
+        // padding: 0 10px;
+    }
+
+    @media (max-width: $md2 + px) {
+        max-width: 750px;
+
+    }
+
+    @media (max-width: $md3 + px) {
+        max-width: none;
+        // padding: 0 10px;
+    }
+}
+
+
+// Обнуление стилей
+@import 'nullstyler';
+
+
+// Другие файлы scss
+@import 'fonts';
+@import 'variables';
+@import 'global';
+@import 'forms';
+@import 'buttons';
+@import 'slider';
+@import 'popups';
+
+
+// сторонние плагины
+
+@import '../css/nouislider.min.css';
+
+// Медиа запросы
+@import 'media';
+
+
+// Подключение файлов стилей страниц и элементов
+@import 'header';
+@import 'home';
+@import 'footer';
+
+// Стили других страниц
+
+@import 'promotions';
+@import 'contacts';
+@import 'about';
+@import 'delivery';
+@import 'review';
+@import 'warranty';
+@import 'installation';
+@import 'catalog';
+@import 'product-page';
+@import 'cart';
+@import 'favorite';
+@import 'compare';
